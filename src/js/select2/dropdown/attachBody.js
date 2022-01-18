@@ -217,6 +217,10 @@ define([
       newDirection = 'below';
     }
 
+    if(this.options.get('forcePosition')!==undefined){
+        newDirection = this.options.get('forcePosition');
+    }
+    
     if (newDirection == 'above' ||
       (isCurrentlyAbove && newDirection !== 'below')) {
       css.top = container.top - parentOffset.top - dropdown.height;
